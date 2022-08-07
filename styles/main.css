@@ -69,22 +69,28 @@ button {
   max-height: 100%;
   text-align: center;
   background: rgb(0, 0, 0, 0.8);
+  overflow: auto;
 }
 
-/* If this isn't specified, the text has a non-translucent background */
+/* Stylings for the box */
 
-.ctinfobase * {
+.ctinfobox {
+  margin-inline: 5em;
+  margin-top: 3em;
+  background: var(--bg-dark);
+  border-radius: 5px;
+}
+
+/* Make sure the text doesn't have its own background */
+
+.ctinfobox * {
   background: none;
 }
 
 /* Stylings for its actual content */
 
 .ctinfo {
-  margin-inline: 5em;
-  margin-top: 3em;
   padding: 5px;
-  background: var(--bg-dark);
-  border-radius: 5px;
 }
 
 /* Space the text out a bit and left-align it for readability */
