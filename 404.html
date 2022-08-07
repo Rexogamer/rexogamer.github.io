@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Rexo</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="/src/favicon.png" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      function showOrHide(id, displayType) {
+        const element = document.getElementById(id);
+        const status = element.getAttribute("style");
+        element.setAttribute("style", `display: ${displayType};`);
+      }
+    </script>
+    <div class="header">
+      <span class="headerlisting">
+        Rexo's Site • <a href="/index.html">Home</a> • More coming soon...
+      </span>
+      <hr style="max-width: 50em; text-align: left; margin-left: 0" />
+    </div>
+    <!-- <iframe src="components/header.html" style="width: 500px;" onload="this.before(this.contentDocument.body.children[0]);this.remove()"></iframe> -->
+    <div class="intro">
+      <h1>Page not found</h1>
+      <p>
+        Unfortunately, that page could not be found - it may have been moved or
+        deleted, or you might've made a typo. Check your spelling and try again,
+        or click on one of the links above.
+      </p>
+    </div>
+  </body>
+</html>
