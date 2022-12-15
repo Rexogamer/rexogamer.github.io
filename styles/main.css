@@ -6,6 +6,7 @@
   --text-dark: #ffffff;
   --button-dark: #045564;
   --tooltip-dark: #5c5c5c55;
+  --banner-dark: #077d92;
 }
 
 * {
@@ -47,12 +48,30 @@ a:hover {
   font-size: 125%;
 }
 
-button {
+button,
+.ctinfo button {
   padding: 10px;
+  font-size: 90%;
   border: none;
   background-color: var(--button-dark);
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* BANNERS */
+
+.banner {
+  background-color: var(--banner-dark);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Make sure links/non-button elements don't have their own backgrounds/use the text colour */
+
+.banner a,
+b {
+  background: none;
+  color: inherit;
 }
 
 /* THE CONTACT INFO POPOVER */

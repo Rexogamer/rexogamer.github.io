@@ -3,14 +3,33 @@
   <head>
     <title>Home - Rexo</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="/favicon.png" />
+    <link rel="icon" href="/assets/favicon.png" />
   </head>
-  <body>
+  <body onload="checkUserAgent() && checkUTM()">
     <script type="text/javascript">
+      async function checkUserAgent() {
+        const ua = navigator.userAgent;
+        const wkRegex = /AppleWebKit/;
+        const geckoRegex = /Gecko\//;
+        const isBlinkOrWebKit = wkRegex.test(ua);
+        const isGecko = geckoRegex.test(ua);
+        const hasDismissedNotice = localStorage.getItem(
+          "hasDismissedBrowserNotice"
+        );
+        if (!isBlinkOrWebKit && !isGecko && !hasDismissedNotice) {
+          showOrHide("browserSupportNotice", "inherit");
+        }
+      }
       function showOrHide(id, displayType) {
         const element = document.getElementById(id);
         const status = element.getAttribute("style");
         element.setAttribute("style", `display: ${displayType};`);
+      }
+      function checkUTM() {
+        const params = new URLSearchParams(document.location.search).get(
+          "utm_source"
+        );
+        console.log(params);
       }
     </script>
     <div class="header">
@@ -21,6 +40,21 @@
     </div>
     <!-- <iframe src="components/header.html" style="width: 500px;" onload="this.before(this.contentDocument.body.children[0]);this.remove()"></iframe> -->
     <div class="intro">
+      <div class="banner" id="browserSupportNotice" style="display: none">
+        <b>It looks like you're using an older/less popular browser.</b>
+        <br />
+        Please note that this site is only actively tested on Firefox, Edge and
+        Safari for iOS - while I will attempt to use widely implemented
+        APIs/features, there may be bugs on other browsers.
+        <br />
+        <button
+          onclick="showOrHide('browserSupportNotice', 'none');
+          localStorage.setItem('hasDismissedBrowserNotice', true);"
+          style="cursor: pointer"
+        >
+          Close
+        </button>
+      </div>
       <h1>Home</h1>
       <p>
         Heya! I'm <b>Rexo</b>. I'm a hobbyist developer, a Wikimedian, a Switch
@@ -32,6 +66,7 @@
       <p>
         You can contact me via the methods listed
         <a
+          href="#"
           onclick="showOrHide('contactinfo', 'inherit')"
           style="cursor: pointer"
           >here</a
@@ -56,6 +91,7 @@
         <div class="ctinfo">
           <h2>
             How to contact me (<a
+              href="#"
               onclick="showOrHide('contactinfo', 'none')"
               style="cursor: pointer"
               >close</a
@@ -81,10 +117,10 @@
               you). My handle is
               <a href="https://twitter.com/@RexogamerS"
                 ><code>@RexogamerS</code></a
-              >. (I'm also on the fediverse as
+              >. I'm also on the Fediverse as
               <a rel="me" href="https://based.social/@rexo"
                 ><code>@rexo:based.social</code></a
-              >.)
+              >.
             </li>
             <li>
               Finally, if you're not a fan of more modern services like these,
@@ -93,6 +129,17 @@
                 ><code>beartechtalks<wbr />@gmail.com</code></a
               >).
             </li>
+            <!-- considering switching to buttons :thinking:
+            <p>
+              EXPERIMENTAL: click one of these buttons to go to the relevant
+              account :eyes:
+              <br />
+              <button title="Fediverse (Mastodon)" onclick="window.location.href='https://based.social/@rexo'">Fediverse</button>
+              <button title="Twitter" onclick="window.location.href='https://twitter.com/rexogamers'">Twitter</button>
+              <button title="GitHub" onclick="window.location.href='https://github.com/rexogamer'">GitHub</button>  
+              </a>
+            </p>
+            -->
           </ul>
         </div>
       </div>
