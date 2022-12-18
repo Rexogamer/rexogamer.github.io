@@ -94,7 +94,7 @@ b {
 /* Stylings for the box */
 
 .ctinfobox {
-  margin-inline: 5em;
+  margin-inline: 4em;
   margin-top: 3em;
   background: var(--bg-dark);
   border-radius: 5px;
