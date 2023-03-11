@@ -32,12 +32,6 @@
         const status = element.getAttribute("style");
         element.setAttribute("style", `display: ${displayType};`);
       }
-      function checkUTM() {
-        const params = new URLSearchParams(document.location.search).get(
-          "utm_source"
-        );
-        console.log(params);
-      }
     </script>
     <div class="header">
       <span class="headerlisting">
