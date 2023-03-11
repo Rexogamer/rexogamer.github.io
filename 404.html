@@ -4,13 +4,20 @@
     <title>404 - Rexo's Site</title>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="icon" href="/assets/favicon.png" />
+    <script
+      defer
+      data-domain="rexogamer.github.io"
+      data-api="https://revolt.chat/api/hello"
+      src="https://revolt.chat/js/p.js"
+    ></script>
   </head>
-  <body>
+  <body onload="checkUTM()">
     <script type="text/javascript">
-      function showOrHide(id, displayType) {
-        const element = document.getElementById(id);
-        const status = element.getAttribute("style");
-        element.setAttribute("style", `display: ${displayType};`);
+      function checkUTM() {
+        const params = new URLSearchParams(document.location.search).get(
+          "utm_source"
+        );
+        console.log(params);
       }
     </script>
     <div class="header">

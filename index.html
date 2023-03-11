@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="icon" href="/assets/favicon.png" />
+    <script
+      defer
+      data-domain="rexogamer.github.io"
+      data-api="https://revolt.chat/api/hello"
+      src="https://revolt.chat/js/p.js"
+    ></script>
   </head>
   <body onload="checkUserAgent() && checkUTM()">
     <script type="text/javascript">
-      async function checkUserAgent() {
+      function checkUserAgent() {
         const ua = navigator.userAgent;
         const wkRegex = /AppleWebKit/;
         const geckoRegex = /Gecko\//;

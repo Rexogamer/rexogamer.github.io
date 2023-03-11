@@ -12,8 +12,8 @@
 * {
   background-color: var(--bg-dark);
   color: var(--text-dark);
-  font-family: "Open Sans", "Segoe UI", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: "Open Sans", "Segoe UI", "Ubuntu", -apple-system,
+    BlinkMacSystemFont, sans-serif;
 }
 
 code {
