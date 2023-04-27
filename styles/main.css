@@ -32,7 +32,7 @@ a:hover {
 
 .intro,
 .header {
-  padding-left: 20px;
+  padding-inline: 20px;
 }
 
 .intro {
@@ -56,6 +56,23 @@ button,
   background-color: var(--button-dark);
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* PROJECTS PAGE */
+
+.projbox {
+  display: flex;
+  margin-block: 1em;
+}
+
+.projinfo {
+  display: block;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.projimg {
+  align-self: center;
 }
 
 /* BANNERS */
