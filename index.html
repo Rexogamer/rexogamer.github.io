@@ -37,7 +37,7 @@
         element.setAttribute("style", `display: ${displayType};`);
       }
     </script>
-    <div class="header">
+    <header class="header">
       <span class="headerlisting">
         Rexo's Site •
         <a title="Go to the home page" href="/index.html">Home</a> •
@@ -50,105 +50,109 @@
           Source code
         </a>
       </span>
-    </div>
-    <!-- <iframe src="components/header.html" style="width: 500px;" onload="this.before(this.contentDocument.body.children[0]);this.remove()"></iframe> -->
-    <div class="intro">
-      <div class="banner" id="browserSupportNotice" style="display: none">
-        <b>It looks like you're using an older/less popular browser.</b>
-        <br />
-        Please note that this site is only actively tested on Firefox, Edge and
-        Safari for iOS - while I will attempt to use widely implemented
-        APIs/features, there may be bugs on other browsers.
-        <br />
-        <button
-          type="button"
-          onclick="showOrHide('browserSupportNotice', 'none');
+    </header>
+    <main class="container">
+      <div class="intro">
+        <div class="banner" id="browserSupportNotice" style="display: none">
+          <b>It looks like you're using an older/less popular browser.</b>
+          <br />
+          Please note that this site is only actively tested on Firefox, Edge
+          and Safari for iOS - while I will attempt to use widely implemented
+          APIs/features, there may be bugs on other browsers.
+          <br />
+          <button
+            type="button"
+            onclick="showOrHide('browserSupportNotice', 'none');
           localStorage.setItem('hasDismissedBrowserNotice', true);"
-          style="cursor: pointer"
-        >
-          Close
-        </button>
+            style="cursor: pointer"
+          >
+            Close
+          </button>
+        </div>
+        <h1>Home</h1>
+        <p>
+          Heya! I'm <b>Rexo</b>. I'm a hobbyist developer, a Wikimedian, a
+          Switch gamer and a massive fan of sushi.<br />I mostly use JS/TS,
+          although I also have some experience with Python. I'm currently doing
+          frontend dev and triage at <a href="https://revolt.chat">Revolt</a>,
+          and also maintain a few side projects.
+        </p>
+        <p>
+          You can contact me via the methods listed below - if you do, please
+          make it clear that you're here from my site. Thanks!
+        </p>
+        <p>
+          <i>
+            This site is currently in beta - you may find bugs or quirks,
+            especially on mobile.
+          </i>
+        </p>
+        <div>
+          <a
+            title="Follow me on the Fediverse"
+            href="https://based.social/@rexo"
+          >
+            <div
+              class="icon"
+              style="
+                mask-image: url(assets/icons/fedi.svg);
+                -webkit-mask-image: url(assets/icons/fedi.svg);
+              "
+              alt="Fediverse logo"
+            ></div>
+          </a>
+          <a title="View my GitHub profile" href="https://github.com/rexogamer">
+            <div
+              class="icon"
+              style="
+                mask-image: url(assets/icons/github.svg);
+                -webkit-mask-image: url(assets/icons/github.svg);
+              "
+              alt="GitHub logo"
+            ></div>
+          </a>
+          <a
+            title="Join my Revolt server (preferred)"
+            href="https://rvlt.gg/rexo"
+          >
+            <div
+              class="icon"
+              style="
+                mask-image: url(assets/icons/revolt.svg);
+                -webkit-mask-image: url(assets/icons/revolt.svg);
+              "
+              alt="Revolt logo"
+            ></div>
+          </a>
+          <a
+            title="Message me on Matrix"
+            href="https://matrix.to/#/@rexogamer:mozilla.org"
+          >
+            <div
+              class="icon"
+              style="
+                mask-image: url(assets/icons/matrix.svg);
+                -webkit-mask-image: url(assets/icons/matrix.svg);
+              "
+              alt="Matrix logo"
+            ></div>
+          </a>
+          <a
+            title="Send me an email"
+            href="mailto:beartechtalks@gmail.com?subject=[ENQUIRY]&body=(I am here from your website.)"
+          >
+            <div
+              class="icon"
+              style="
+                mask-image: url(assets/icons/email.svg);
+                -webkit-mask-image: url(assets/icons/email.svg);
+              "
+              alt="At symbol"
+            ></div>
+          </a>
+        </div>
       </div>
-      <h1>Home</h1>
-      <p>
-        Heya! I'm <b>Rexo</b>. I'm a hobbyist developer, a Wikimedian, a Switch
-        gamer and a massive fan of sushi.<br />I mostly use JS/TS, although I
-        also have some experience with Python. I'm currently doing frontend dev
-        and triage at <a href="https://revolt.chat">Revolt</a>, and also
-        maintain a few side projects.
-      </p>
-      <p>
-        You can contact me via the methods listed below - if you do, please make
-        it clear that you're here from my site. Thanks!
-      </p>
-      <p>
-        <i>
-          This site is currently in beta - you may find bugs or quirks,
-          especially on mobile.
-        </i>
-      </p>
-      <div>
-        <a title="Follow me on the Fediverse" href="https://based.social/@rexo">
-          <div
-            class="icon"
-            style="
-              mask-image: url(assets/icons/fedi.svg);
-              -webkit-mask-image: url(assets/icons/fedi.svg);
-            "
-            alt="Fediverse logo"
-          ></div>
-        </a>
-        <a title="View my GitHub profile" href="https://github.com/rexogamer">
-          <div
-            class="icon"
-            style="
-              mask-image: url(assets/icons/github.svg);
-              -webkit-mask-image: url(assets/icons/github.svg);
-            "
-            alt="GitHub logo"
-          ></div>
-        </a>
-        <a
-          title="Join my Revolt server (preferred)"
-          href="https://rvlt.gg/rexo"
-        >
-          <div
-            class="icon"
-            style="
-              mask-image: url(assets/icons/revolt.svg);
-              -webkit-mask-image: url(assets/icons/revolt.svg);
-            "
-            alt="Revolt logo"
-          ></div>
-        </a>
-        <a
-          title="Message me on Matrix"
-          href="https://matrix.to/#/@rexogamer:mozilla.org"
-        >
-          <div
-            class="icon"
-            style="
-              mask-image: url(assets/icons/matrix.svg);
-              -webkit-mask-image: url(assets/icons/matrix.svg);
-            "
-            alt="Matrix logo"
-          ></div>
-        </a>
-        <a
-          title="Send me an email"
-          href="mailto:beartechtalks@gmail.com?subject=[ENQUIRY]&body=(I am here from your website.)"
-        >
-          <div
-            class="icon"
-            style="
-              mask-image: url(assets/icons/email.svg);
-              -webkit-mask-image: url(assets/icons/email.svg);
-            "
-            alt="At symbol"
-          ></div>
-        </a>
-      </div>
-    </div>
+    </main>
     <!-- invisible link for mastodon verification -->
     <a style="display: none" rel="me" href="https://based.social/@rexo"
       >Mastodon verification lnik</a
