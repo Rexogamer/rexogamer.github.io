@@ -47,7 +47,6 @@
           Source code
         </a>
       </span>
-      <hr style="max-width: 50em; text-align: left; margin-left: 0" />
     </div>
     <!-- <iframe src="components/header.html" style="width: 500px;" onload="this.before(this.contentDocument.body.children[0]);this.remove()"></iframe> -->
     <div class="intro">
@@ -76,14 +75,8 @@
         maintain a few side projects.
       </p>
       <p>
-        You can contact me via the methods listed
-        <a
-          href="#"
-          onclick="showOrHide('contactinfo', 'inherit')"
-          style="cursor: pointer"
-          >here</a
-        >
-        - if you do, please make it clear that you're here from my site. Thanks!
+        You can contact me via the methods listed below - if you do, please make
+        it clear that you're here from my site. Thanks!
       </p>
       <p>
         <i>
@@ -91,70 +84,66 @@
           especially on mobile.
         </i>
       </p>
-      <button
-        type="button"
-        title="View my GitHub profile"
-        onclick="window.location.href='https://github.com/rexogamer'"
-      >
-        GitHub
-      </button>
-    </div>
-    <div class="ctinfobase" id="contactinfo" style="display: none">
-      <div class="ctinfobox">
-        <div class="ctinfo">
-          <h2>
-            How to contact me (<a
-              href="#"
-              onclick="showOrHide('contactinfo', 'none')"
-              style="cursor: pointer"
-              >close</a
-            >)
-          </h2>
-          <ul>
-            <li>
-              You can DM me on
-              <a href="https://revolt.chat"><b>Revolt</b></a>
-              (<code>Rexogamer<wbr />#3096</code>) or
-              <a href="https://discord.com"><b>Discord</b></a>
-              (<code>Rexowogamer<wbr />#1183</code>). These are the best ways to
-              contact me as I frequently check these platforms.
-            </li>
-            <li>
-              If you're not a fan of those two, you can also find me on
-              <a href="https://matrix.org"><b>Matrix</b></a> at
-              <code>rexogamer:<wbr />mozilla.org</code>.
-            </li>
-            <li>
-              I also have <a href="https://twitter.com"><b>Twitter</b></a
-              >! I accept DMs from anyone (you don't need me to be following
-              you). My handle is
-              <a href="https://twitter.com/@RexogamerS"
-                ><code>@RexogamerS</code></a
-              >. I'm also on the Fediverse as
-              <a rel="me" href="https://based.social/@rexo"
-                ><code>@rexo:<wbr />based.social</code></a
-              >.
-            </li>
-            <li>
-              Finally, if you're not a fan of more modern services like these,
-              you can send an <b>email</b> to the publicly listed email on my
-              profile (<a href="mailto:beartechtalks@gmail.com"
-                ><code>beartechtalks<wbr />@gmail.com</code></a
-              >).
-            </li>
-            <!-- considering switching to buttons :thinking:
-            <p>
-              EXPERIMENTAL: click one of these buttons to go to the relevant
-              account :eyes:
-              <br />
-              <button type="button" title="Fediverse (Mastodon)" onclick="window.location.href='https://based.social/@rexo'">Fediverse</button>
-              <button type="button" title="Twitter" onclick="window.location.href='https://twitter.com/rexogamers'">Twitter</button>
-              <button type="button" title="GitHub" onclick="window.location.href='https://github.com/rexogamer'">GitHub</button>  
-              </a>
-            </p>
-            -->
-          </ul>
-        </div>
+      <div>
+        <a title="Follow me on the Fediverse" href="https://based.social/@rexo">
+          <div
+            class="icon"
+            style="
+              mask-image: url(assets/icons/fedi.svg);
+              -webkit-mask-image: url(assets/icons/fedi.svg);
+            "
+            alt="Fediverse logo"
+          ></div>
+        </a>
+        <a title="View my GitHub profile" href="https://github.com/rexogamer">
+          <div
+            class="icon"
+            style="
+              mask-image: url(assets/icons/github.svg);
+              -webkit-mask-image: url(assets/icons/github.svg);
+            "
+            alt="GitHub logo"
+          ></div>
+        </a>
+        <a
+          title="Join my Revolt server (preferred)"
+          href="https://rvlt.gg/rexo"
+        >
+          <div
+            class="icon"
+            style="
+              mask-image: url(assets/icons/revolt.svg);
+              -webkit-mask-image: url(assets/icons/revolt.svg);
+            "
+            alt="Revolt logo"
+          ></div>
+        </a>
+        <a
+          title="Message me on Matrix"
+          href="https://matrix.to/#/@rexogamer:mozilla.org"
+        >
+          <div
+            class="icon"
+            style="
+              mask-image: url(assets/icons/matrix.svg);
+              -webkit-mask-image: url(assets/icons/matrix.svg);
+            "
+            alt="Matrix logo"
+          ></div>
+        </a>
+        <a
+          title="Send me an email"
+          href="mailto:beartechtalks@gmail.com?subject=[ENQUIRY]&body=(I am here from your website.)"
+        >
+          <div
+            class="icon"
+            style="
+              mask-image: url(assets/icons/email.svg);
+              -webkit-mask-image: url(assets/icons/email.svg);
+            "
+            alt="At symbol"
+          ></div>
+        </a>
       </div>
     </div>
     <!-- invisible link for mastodon verification -->

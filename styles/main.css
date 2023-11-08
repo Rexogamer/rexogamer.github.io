@@ -30,13 +30,24 @@ a:hover {
   text-decoration: underline;
 }
 
+.legacyintro {
+  padding-inline: 20px;
+}
+
 .intro,
 .header {
-  padding-inline: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .intro {
   max-width: 50em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header {
@@ -48,14 +59,31 @@ a:hover {
   font-size: 125%;
 }
 
-button,
-.ctinfo button {
+button {
   padding: 10px;
   font-size: 90%;
   border: none;
   background-color: var(--button-dark);
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* SITE ICONS */
+
+/* original code from https://devkats.club */
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  mask-size: 90%;
+  -webkit-mask-size: 90%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: 50%;
+  -webkit-mask-position: 50%;
+  background-color: var(--text-dark);
+  margin: 6px;
 }
 
 /* PROJECTS PAGE */
@@ -89,51 +117,6 @@ button,
 b {
   background: none;
   color: inherit;
-}
-
-/* THE CONTACT INFO POPOVER */
-
-/* Base/background stylings for the content info popover */
-
-.ctinfobase {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  position: fixed;
-  max-height: 100%;
-  text-align: center;
-  background: rgb(0, 0, 0, 0.8);
-  overflow: auto;
-}
-
-/* Stylings for the box */
-
-.ctinfobox {
-  margin-inline: 4em;
-  margin-top: 3em;
-  background: var(--bg-dark);
-  border-radius: 5px;
-}
-
-/* Make sure the text doesn't have its own background */
-
-.ctinfobox * {
-  background: none;
-}
-
-/* Stylings for its actual content */
-
-.ctinfo {
-  padding: 5px;
-}
-
-/* Space the text out a bit and left-align it for readability */
-
-.ctinfo ul {
-  line-height: 1.7;
-  text-align: left;
 }
 
 /* TOOLTIPS */
