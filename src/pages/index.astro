@@ -1,0 +1,45 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`Home - ${SITE_TITLE}`}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <h1>heya!</h1>
+            <p>
+                I'm <b>Rexo</b> - a hobbyist developer, a Wikimedian, a Switch gamer
+                and a massive fan of sushi. I'm also <i>very</i> fond of cats :3
+            </p>
+            <p>
+                I mostly use JS/TS, although I also have a bit of experience
+                with Python.
+            </p>
+            <p>
+                currently, I'm focusing on <a href="https://upryzing.app"
+                    >Upryzing</a
+                > and <a href="https://github.com/revoltchat/rvmob">RVMob</a>.
+                I've also done frontend dev and triage at
+                <a href="https://revolt.chat">Revolt</a>, and maintain a few
+                side projects. you can find out more about what I've worked on <a
+                    href="/projects">here</a
+                >.
+            </p>
+            <p>
+                you can contact me via the methods listed below - if you do,
+                please make it clear that you're coming from my site. thanks!
+            </p>
+        </main>
+        <Footer />
+    </body>
+</html>

@@ -1,0 +1,78 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import FirefishIcon from "../components/icons/Firefish.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import RevoltIcon from "../components/icons/Revolt.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header>
+    <nav>
+        <h2><a href="/">{SITE_TITLE}</a></h2>
+        <div class="internal-links">
+            <HeaderLink href="/">Home</HeaderLink>
+            <HeaderLink href="/projects">Projects</HeaderLink>
+            <HeaderLink href="/blog">Blog</HeaderLink>
+            <!-- NOT WRITTEN YET <HeaderLink href="/about">About</HeaderLink> -->
+        </div>
+        <div class="social-links">
+            <a href="https://is.horse/@rexo" target="_blank">
+                <span class="sr-only">Follow me on the Fediverse</span>
+                <FirefishIcon />
+            </a>
+            <a href="https://github.com/rexogamer" target="_blank">
+                <span class="sr-only">View my GitHub profile</span>
+                <GitHubIcon />
+            </a>
+            <a href="https://rvlt.gg/rexo" target="_blank">
+                <span class="sr-only">Join my Revolt server</span>
+                <RevoltIcon />
+            </a>
+        </div>
+    </nav>
+</header>
+<style>
+    header {
+        margin: 0;
+        padding: 0 1em;
+        background: var(--background-secondary);
+    }
+    h2 {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    h2 a,
+    h2 a.active {
+        text-decoration: none;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav a {
+        padding: 1em 0.5em;
+        color: var(--text-primary);
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+    }
+    nav a.active {
+        text-decoration: none;
+        border-bottom-color: var(--accent);
+    }
+    .social-links,
+    .social-links a {
+        display: flex;
+    }
+    @media (max-width: 720px) {
+        nav {
+            flex-direction: column;
+            padding-block-start: 1em;
+        }
+
+        .social-links {
+            display: none;
+        }
+    }
+</style>

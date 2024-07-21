@@ -1,0 +1,77 @@
+---
+// i would happily use regular fedi/mail icons but simple-icons doesn't have either. better than just calling it all mastodon 🧌
+import FirefishIcon from "../components/icons/Firefish.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import GmailIcon from "../components/icons/Gmail.astro";
+import MatrixIcon from "../components/icons/Matrix.astro";
+import RevoltIcon from "../components/icons/Revolt.astro";
+
+const today = new Date();
+---
+
+<footer>
+    &copy; {today.getFullYear()} Sophie L
+    <div class="social-links">
+        <a href="https://is.horse/@rexo" target="_blank">
+            <span class="sr-only">Follow me on the Fediverse</span>
+            <FirefishIcon />
+        </a>
+        <a href="https://github.com/rexogamer" target="_blank">
+            <span class="sr-only">View my GitHub profile</span>
+            <GitHubIcon />
+        </a>
+        <a href="https://rvlt.gg/rexo" target="_blank">
+            <span class="sr-only">Join my Revolt server</span>
+            <RevoltIcon />
+        </a>
+        <a href="https://matrix.to/#/@rexogamer:mozilla.org" target="_blank">
+            <span class="sr-only">Message me on Matrix</span>
+            <MatrixIcon />
+        </a>
+        <a
+            href="mailto:beartechtalks@gmail.com?subject=[ENQUIRY]&body=(I'm here from your website.)"
+            target="_blank"
+        >
+            <span class="sr-only">Send me an email</span>
+            <GmailIcon />
+        </a>
+    </div>
+    <p class="bottom-links">
+        <a href="https://github.com/rexogamer/rexogamer.github.io"
+            >source code</a
+        > • icons from <a href="https://github.com/simple-icons/simple-icons"
+            >Simple Icons</a
+        >
+    </p>
+    <p id="webring" class="bottom-links">
+        🍰💍
+        <a href="https://sneexy.pages.gay/">&lt;--</a> • <a
+            href="https://amycatgirl.nekoweb.org/">--&gt;</a
+        >
+        💍🍰
+    </p>
+</footer>
+<style>
+    footer {
+        padding: 2em 1em;
+        background: var(--background-secondary);
+        color: var(--text-primary);
+        text-align: center;
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-block: 1em;
+    }
+    .social-links a {
+        text-decoration: none;
+        color: var(--text-primary);
+    }
+    .social-links a:hover {
+        color: var(--social-link-hover);
+    }
+    .bottom-links {
+        font-size: 85%;
+    }
+</style>

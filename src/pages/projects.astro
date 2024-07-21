@@ -1,0 +1,66 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ProjectListing from "../components/ProjectListing.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`Home - ${SITE_TITLE}`}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <h1>projects</h1>
+            <p>
+                here's a list of my various coding projects. most of them are
+                written in JavaScript/TypeScript.
+            </p>
+            <ProjectListing
+                name="RVMob"
+                description={"RVMob is an unofficial Revolt client for Android devices. written in TypeScript and built using React Native, it supports a ever growing list of Revolt's features."}
+                links={[
+                    {
+                        url: "https://github.com/revoltchat/rvmob",
+                        label: "Repository",
+                    },
+                    {
+                        url: "https://rvlt,gg/rvmob",
+                        label: "Support server",
+                    },
+                ]}
+            />
+            <ProjectListing
+                name="RVMob"
+                description={"RexBot is a Revolt bot written in TypeScript. it has a wide variety of features, from channel archival and Wikipedia searching to showing the latest playable stages in Splatoon 3."}
+                links={[
+                    {
+                        url: "https://github.com/rexogamer/rexbot",
+                        label: "Repository",
+                    },
+                ]}
+            />
+            <ProjectListing
+                name="Termivolt and Revchiver"
+                description={"Termivolt is a (pretty basic) command line tool that lets you interact with the Revolt API (for example, you can send messages and kick/ban users from servers). Revchiver is a small package that lets you save every message in a Revolt channel; it's designed to be used by other projects, and powers Termivolt and RexBot's archival features. both packages are written in TypeScript."}
+                links={[
+                    {
+                        url: "https://github.com/rexovolt/november",
+                        label: "Repository",
+                    },
+                    {
+                        url: "https://rvlt.gg/ra9dr2Rd",
+                        label: "Support server",
+                    },
+                ]}
+            />
+        </main>
+        <Footer />
+    </body>
+</html>

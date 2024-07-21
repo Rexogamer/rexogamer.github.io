@@ -1,0 +1,31 @@
+---
+interface ProjectLink {
+    url: string;
+    label: string;
+}
+
+interface Props {
+    name: string;
+    description: string;
+    links: ProjectLink[];
+}
+
+const { name, description, links } = Astro.props;
+---
+
+<div>
+    <h4>{name}</h4>
+    <b>
+        {
+            links.map((link, linkNumber, linkArray) => (
+                <>
+                    <a href={link.url}>{link.label}</a>
+                    {linkNumber + 1 < linkArray.length ? "•" : null}
+                </>
+            ))
+        }
+    </b>
+    <p>
+        {description}
+    </p>
+</div>
