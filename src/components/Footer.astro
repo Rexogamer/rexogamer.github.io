@@ -1,5 +1,6 @@
 ---
 // i would happily use regular fedi/mail icons but simple-icons doesn't have either. better than just calling it all mastodon 🧌
+import BlueskyIcon from "../components/icons/Bluesky.astro";
 import FirefishIcon from "../components/icons/Firefish.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import GmailIcon from "../components/icons/Gmail.astro";
@@ -15,6 +16,10 @@ const today = new Date();
         <a href="https://is.horse/@rexo" target="_blank">
             <span class="sr-only">Follow me on the Fediverse</span>
             <FirefishIcon />
+        </a>
+        <a href="https://rexo1183.bsky.social" target="_blank">
+            <span class="sr-only">Follow me on Bluesky</span>
+            <BlueskyIcon />
         </a>
         <a href="https://github.com/rexogamer" target="_blank">
             <span class="sr-only">View my GitHub profile</span>
