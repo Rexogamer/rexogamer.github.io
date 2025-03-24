@@ -125,6 +125,20 @@ hr {
     border: none;
     border-top: 1px solid var(--text-secondary);
 }
+
+@media (min-width: 720px) {
+    html {
+        display: flex;
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 720px) {
     body {
         font-size: 18px;
