@@ -1,0 +1,33 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`Donate - ${SITE_TITLE}`}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <h1>donations</h1>
+            <p>
+                if you want to support my work, you can donate to me via <a
+                    href="https://ko-fi.com/rexogamer">Ko-fi</a
+                > and <a href="https://en.liberapay.com/rexogamer">Liberapay</a
+                >.
+            </p>
+            <p>
+                I want to genuinely and sincerely thank you. this kind of
+                generosity means a lot to me {"<"}3
+            </p>
+        </main>
+        <Footer />
+    </body>
+</html>
