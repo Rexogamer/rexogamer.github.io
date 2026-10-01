@@ -1,0 +1,89 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`Contact - ${SITE_TITLE}`}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <h1>contact me</h1>
+            <p>
+                if you want to contact me, you can do so in various ways. some
+                methods will lead to a quicker response than others.
+            </p>
+            <p>
+                <b>please specify that you are contacting me from my site;</b> and,
+                where possible, <b
+                    >please specify what you're contacting me about in your
+                    initial message.</b
+                > this saves time for both of us!
+            </p>
+            <h2>recommended</h2>
+            <p>
+                <b>
+                    (if you want or need a quick response, please use one of
+                    these!)
+                </b>
+            </p>
+            <p>
+                you can message me on <b>Discord</b> (<code>@rexogamer</code>).
+                this is probably the fastest way of getting in touch with me.
+            </p>
+            <p>
+                I also use <b>Stoat</b> (<code>@Rexogamer#3096</code>); note
+                that, for Clerotri support, you'll probably want
+                <a href={"https://stt.gg/clerotri"}>the support server</a> instead.
+            </p>
+            <p>
+                in terms of social media, I almost exclusively use the
+                <b>Fediverse</b> (<a href="https://st.transbus.social/@rexo"
+                    ><code>@rexo@st.transbus.social</code></a
+                >) and <b>Bluesky</b> (<a
+                    href="https://bsky.app/profile/@rexowo.dev"
+                    ><code>@rexowo.dev</code></a
+                >). please note that <b
+                    >I almost certainly won't respond to Bluesky DMs</b
+                > because I usually can't see them.
+            </p>
+            <p>
+                I also have <b>Signal</b>; I'm a bit hesitant about sharing my
+                account, but if i's entirely necessary you can ask for it via
+                another method.
+            </p>
+            <h2>other methods</h2>
+            <p>
+                (you <i>can</i> use these, but <b>
+                    don't expect a quick response.
+                </b> if you can use one of the methods above instead, please do!)
+            </p>
+            <p>
+                you can <b>email</b> me at <a
+                    href="mailto:beartechtalks@gmail.com?subject=[ENQUIRY]&body=(I'm here from your website.)"
+                    target="_blank">
+                    <code>beartechtalks@gmail.com</code>
+                </a>; responses will be slightly slower, but you should get a
+                reply within a week. for Clerotri enquiries, please use <a
+                    href="mailto:clerotri@upryzing.app"
+                    target="_blank">
+                    <code>clerotri@upryzing.app</code>
+                </a> instead.
+            </p>
+            <p>
+                you can message me on <b>Matrix</b>
+                (<code>@rexogamer:mozilla.org</code>). I'm not huge on Matrix
+                and don't check it as often.
+            </p>
+        </main>
+        <Footer />
+    </body>
+</html>
