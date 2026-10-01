@@ -16,11 +16,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout the repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
             - name: Enable Corepack
               run: corepack enable
             - name: Install, build, and upload the site
-              uses: withastro/action@v2
+              uses: withastro/action@v6
 
     deploy:
         needs: build
@@ -31,4 +31,4 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
