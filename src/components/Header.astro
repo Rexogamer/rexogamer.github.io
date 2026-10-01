@@ -10,10 +10,10 @@ import { SITE_TITLE } from "../consts";
     <nav>
         <h2><a href="/">{SITE_TITLE}</a></h2>
         <div class="internal-links">
-            <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="/projects">Projects</HeaderLink>
-            <HeaderLink href="/donate">Donate</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
+            <HeaderLink id="home" href="/">Home</HeaderLink>
+            <HeaderLink id="projects" href="/projects">Projects</HeaderLink>
+            <HeaderLink id="donate" href="/donate">Donate</HeaderLink>
+            <HeaderLink id="blog" href="/blog">Blog</HeaderLink>
             <!-- NOT WRITTEN YET <HeaderLink href="/about">About</HeaderLink> -->
         </div>
         <div class="social-links">
@@ -62,6 +62,12 @@ import { SITE_TITLE } from "../consts";
         text-decoration: none;
         border-bottom-color: var(--accent);
     }
+    nav a:hover {
+        border-bottom-color: var(--text-secondary);
+    }
+    .internal-links {
+        text-align: center;
+    }
     .social-links,
     .social-links a {
         display: flex;
@@ -72,8 +78,73 @@ import { SITE_TITLE } from "../consts";
             padding-block-start: 1em;
         }
 
+        h2 {
+            font-size: 1.3em;
+        }
+
         .social-links {
             display: none;
+        }
+    }
+
+    @keyframes donateBorder {
+        0% {
+            border-image: linear-gradient(
+                    90deg,
+                    var(--accent),
+                    var(--accent-red)
+                )
+                1;
+        }
+        25% {
+            border-image: linear-gradient(
+                    90deg,
+                    var(--accent-red),
+                    var(--accent),
+                    var(--accent-red)
+                )
+                1;
+        }
+        50% {
+            border-image: linear-gradient(
+                    90deg,
+                    var(--accent-red),
+                    var(--accent)
+                )
+                1;
+        }
+        75% {
+            border-image: linear-gradient(
+                    90deg,
+                    var(--accent),
+                    var(--accent-red),
+                    var(--accent)
+                )
+                1;
+        }
+        100% {
+            border-image: linear-gradient(
+                    90deg,
+                    var(--accent),
+                    var(--accent-red)
+                )
+                1;
+        }
+    }
+
+    nav #donate:hover {
+        border-image: linear-gradient(90deg, var(--accent), var(--accent-red)) 1;
+        animation: donateBorder 2s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        nav #donate:hover {
+            border-image: linear-gradient(
+                    90deg,
+                    var(--accent),
+                    var(--accent-red)
+                )
+                1;
         }
     }
 </style>
