@@ -7,4 +7,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://rexogamer.github.io',
 	integrations: [mdx(), sitemap()],
+	redirects: {
+		// FIXES:
+		// misplaced blog post
+		'/blog/2040721-new-site': '/blog/20240721-new-site'
+	}
 });
