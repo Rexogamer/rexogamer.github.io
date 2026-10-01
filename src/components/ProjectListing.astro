@@ -20,7 +20,7 @@ const { name, description, links } = Astro.props;
             links.map((link, linkNumber, linkArray) => (
                 <>
                     <a href={link.url}>{link.label}</a>
-                    {linkNumber + 1 < linkArray.length ? "•" : null}
+                    {linkNumber + 1 < linkArray.length ? " • " : null}
                 </>
             ))
         }
