@@ -47,11 +47,38 @@ const today = new Date();
             >Simple Icons</a
         >
     </p>
-    <p id="webring" class="bottom-links">
-        🍰💍 <a href="https://sneexy.pages.gay/">&lt;--</a> • <a
-            href="https://amycatgirl.github.io/">--&gt;</a
-        > 💍🍰
-    </p>
+    <div class="bottom-links webrings">
+        <p id="webring-sernik">
+            <a class="webring-previous" href="https://sneexy.synth.download/">
+                <span class="sr-only"
+                    >Go to the previous page in the webring</span
+                >◀</a
+            > • <span class="webring-title"
+                ><span class="emoji">🍰💍</span> sernik <span class="emoji"
+                    >💍🍰</span
+                ></span
+            > • <a class="webring-next" href="https://amycatgirl.github.io/"
+                >▶<span class="sr-only">Go to the next page in the webring</span
+                >
+            </a>
+        </p>
+        <p id="webring-wiki">
+            <a
+                class="webring-previous"
+                href="https://webring.wiki/previous?host=rexowo.dev">
+                <span class="sr-only"
+                    >Go to the previous page in the webring</span
+                >◀</a
+            > • <a class="webring-title" href="https://webring.wiki/"
+                >webring.wiki</a
+            > • <a
+                class="webring-next"
+                href="https://webring.wiki/next?host=rexowo.dev"
+                ><span class="sr-only">Go to the next page in the webring</span
+                >▶</a
+            >
+        </p>
+    </div>
 </footer>
 <style>
     footer {
@@ -76,5 +103,34 @@ const today = new Date();
     }
     .bottom-links {
         font-size: 85%;
+    }
+    .webrings p {
+        margin-block: 0.25em;
+    }
+    .webring-previous,
+    .webring-next {
+        text-decoration: none;
+    }
+    .webring-previous {
+        margin-inline-end: 0.25em;
+    }
+    .webring-title {
+        color: transparent;
+        background-image: linear-gradient(
+            90deg,
+            var(--accent),
+            var(--accent-red)
+        );
+        background-clip: text;
+        display: inline;
+        font-weight: bold;
+        margin-inline: 0.25em;
+    }
+    .webring-title .emoji {
+        color: var(--text-primary);
+    }
+    .webring-next {
+        color: var(--accent-red);
+        margin-inline-start: 0.25em;
     }
 </style>
